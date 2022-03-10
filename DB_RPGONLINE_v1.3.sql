@@ -65,3 +65,13 @@ ON Personagens.ClasseId = Classes.ClasseId
 SELECT * FROM Personagens AS P
 INNER JOIN Classes AS C 
 ON P.ClasseId = C.ClasseId
+
+CREATE LOGIN Player
+WITH PASSWORD = '123456'
+
+CREATE USER Player FOR LOGIN Player
+
+GRANT SELECT TO Player
+
+
+
